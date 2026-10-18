@@ -65,7 +65,7 @@ El motor todavía no incorpora evaluación estratégica, búsqueda de movimiento
 
 Para consultar los cambios detallados de cada versión, consultar `CHANGELOG.md`.
 
-## 5. Hoja de ruta
+## 5. Roadmap
 
 ### Fase 1 — Motor básico
 - [x] Configuración del entorno de desarrollo.
