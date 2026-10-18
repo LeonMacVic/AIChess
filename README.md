@@ -2,7 +2,7 @@
 
 ### Motor de ajedrez autónomo basado en inteligencia artificial y aprendizaje por refuerzo
 
-AIChess es un proyecto personal de Ingeniería Informática cuyo objetivo es desarrollar progresivamente un motor de ajedrez autónomo, capaz de analizar posiciones, tomar decisiones estratégicas y mejorar su nivel de juego mediante técnicas de inteligencia artificial y aprendizaje por refuerzo (*Reinforcement Learning*).
+AIChess es un proyecto personal cuyo objetivo es desarrollar progresivamente un motor de ajedrez autónomo, capaz de analizar posiciones, tomar decisiones estratégicas y mejorar su nivel de juego mediante técnicas de inteligencia artificial y aprendizaje por refuerzo (*Reinforcement Learning*).
 
 El proyecto combina algoritmia, ingeniería del software, aprendizaje automático y optimización computacional. Su desarrollo se realiza de forma incremental, incorporando nuevas funcionalidades, pruebas y mejoras en cada versión.
 
