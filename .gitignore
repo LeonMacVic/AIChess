@@ -1,0 +1,51 @@
+#Entornos virtuales de python
+
+.venv/
+venv/
+env/
+
+#Archivos temporales de python
+
+__pychache__/
+*.pyc
+*.pyo
+
+#Herramientas de pruebas y análisis
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage/
+htmlcov/
+
+#Configuración local de vscode
+
+.vscode/
+
+#Archivos del sistema 
+
+.DS_Store/
+
+#Variables de entorno y credenciales
+
+.env
+.env.*
+!.env.example
+
+#Datos generados entrenamiento
+
+data/generated/
+data/self_play/
+
+#Modelos neuronales entrenados
+
+models/checkpoints/
+*.pt
+*.pth
+*.ckpt
+
+#Registros de entrenamiento
+
+logs/
+runs/
+mlruns/
