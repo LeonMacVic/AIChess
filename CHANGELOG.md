@@ -4,15 +4,36 @@ Este documento registra los cambios más relevantes realizados durante el desarr
 
 El proyecto utiliza una numeración de versiones con el formato `MAJOR.MINOR.PATCH` como referencia para organizar sus entregas.
 
-## [Sin publicar]
+## [0.2.0] — 20/10/2026
 
-### Previsto
-- Implementación de una función de evaluación material.
-- Desarrollo de un algoritmo de búsqueda de profundidad 1.
-- Incorporación de pruebas automatizadas mediante pytest.
-- Mejora de la selección de movimientos.
+### Añadido
 
----
+**Evaluación estratégica**
+- Implementación de una función de evaluación material en `evaluacion_tablero.py`.
+- Valoración de peones, caballos, alfiles, torres y damas mediante centipeones.
+- Detección y valoración de posiciones de jaque mate.
+- Asignación de una evaluación neutral a posiciones terminales de tablas.
+
+**Selección de movimientos**
+- Implementación de búsqueda exhaustiva de profundidad 1.
+- Selección de movimientos según la mejor evaluación inmediata.
+- Maximización de la evaluación para las blancas y minimización para las negras.
+- Simulación de movimientos mediante `push()` y restauración mediante `pop()`.
+- Resolución aleatoria de empates entre movimientos con idéntica puntuación.
+
+**Pruebas automatizadas**
+- Incorporación de pytest.
+- Pruebas de igualdad y ventaja material.
+- Pruebas de detección de jaque mate y tablas.
+- Verificación de la legalidad de los movimientos seleccionados.
+- Verificación de la captura de una pieza de mayor valor.
+- Comprobación de que la búsqueda conserva el estado original del tablero.
+
+### Limitaciones conocidas
+- Búsqueda limitada a una jugada de profundidad.
+- Ausencia de anticipación de respuestas del rival.
+- Evaluación basada únicamente en material y resultados terminales.
+- Ausencia de aprendizaje automático.
 
 ## [0.1.0] — 18/10/2026
 

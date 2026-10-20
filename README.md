@@ -23,6 +23,7 @@ El proyecto combina algoritmia, ingeniería del software, aprendizaje automátic
 
 - **Python 3.12:** lenguaje principal de programación.
 - **python-chess:** gestión del tablero, generación de movimientos legales y reglas del ajedrez.
+- **pytest:** desarrollo y ejecución de pruebas automatizadas para verificar el funcionamiento de los algoritmos.
 - **Git:** control de versiones.
 - **GitHub:** alojamiento y documentación del repositorio.
 - **Visual Studio Code:** entorno de desarrollo.
@@ -39,26 +40,36 @@ El proyecto combina algoritmia, ingeniería del software, aprendizaje automátic
 
 ## 3. Estado actual del proyecto
 
-**Versión 0.1.0 — Motor autónomo básico**
+**Versión 0.2.0 — Motor con evaluación estratégica básica**
 
-Funcionalidades implementadas:
+### Funcionalidades implementadas
 
-- Representación del tablero de ajedrez.
-- Generación y ejecución de movimientos legales.
-- Identificación del jugador al que corresponde el turno.
-- Selección aleatoria de movimientos legales.
-- Simulación de partidas autónomas.
-- Identificación de resultados y causas de finalización.
-- Límite de movimientos para controlar la duración de las simulaciones.
+- Representación del tablero mediante python-chess.
+- Generación, validación y ejecución de movimientos legales.
+- Ejecución autónoma de partidas completas.
+- Evaluación de posiciones mediante el valor material de las piezas.
+- Sistema de puntuación en centipeones.
+- Identificación y valoración de jaques mate y tablas.
+- Búsqueda exhaustiva de movimientos de profundidad 1 (*one-ply search*).
+- Selección de la jugada con mejor evaluación inmediata.
+- Deshacer movimientos simulados para conservar la posición original.
+- Pruebas automatizadas mediante pytest.
 
-El motor todavía no incorpora evaluación estratégica, búsqueda de movimientos futuros ni aprendizaje automático.
+### Limitaciones actuales
+
+- El motor no anticipa las respuestas del adversario.
+- La evaluación no considera factores posicionales como movilidad, control del centro o seguridad del rey.
+- El sistema todavía no dispone de redes neuronales ni aprendizaje automático.
+- No se ha establecido una clasificación Elo del motor.
+
+El próximo objetivo será implementar Minimax y poda alfa-beta para analizar secuencias de movimientos.
 
 ## 4. Historial de versiones
 
 | Versión | Fecha | Descripción |
 |---|---|---|
 | 0.1.0 | 18/10/2026 | Primer motor autónomo con selección aleatoria de movimientos |
-| 0.2.0 | Pendiente | Evaluación material y búsqueda de profundidad 1 |
+| 0.2.0 | 20/10/2026 | Evaluación material y búsqueda de profundidad 1 |
 | 0.3.0 | Pendiente | Algoritmo Minimax y poda alfa-beta |
 | 0.4.0 | Pendiente | Integración de redes neuronales |
 | 0.5.0 | Pendiente | Aprendizaje por refuerzo mediante self-play |
@@ -74,10 +85,12 @@ Para consultar los cambios detallados de cada versión, consultar `CHANGELOG.md`
 - [x] Configuración de Git y GitHub.
 
 ### Fase 2 — Inteligencia estratégica
-- [ ] Función de evaluación de posiciones.
-- [ ] Búsqueda de movimientos mediante Minimax.
-- [ ] Optimización con poda alfa-beta.
-- [ ] Pruebas automatizadas del motor.
+- [x] Función de evaluación material.
+- [x] Búsqueda exhaustiva de profundidad 1.
+- [x] Pruebas automatizadas iniciales.
+- [ ] Algoritmo Minimax.
+- [ ] Optimización mediante poda alfa-beta.
+- [ ] Evaluación posicional avanzada.
 
 ### Fase 3 — Aprendizaje automático
 - [ ] Diseño de una red neuronal.
